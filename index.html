@@ -105,13 +105,14 @@
     }
     .hero-cycle {
       position: relative; display: block;
-      min-height: 1.1em; overflow: visible;
+      height: 2.4em; overflow: visible;
+      margin-bottom: 0.2em;
     }
     .hero-cycle span {
       display: block; position: absolute; left: 0; top: 0;
       font-style: italic; color: var(--terracotta);
       opacity: 0; animation: cycleSlide 12s infinite;
-      white-space: nowrap;
+      white-space: normal; max-width: 100%;
     }
     .hero-cycle span:nth-child(1) { animation-delay: 0s; }
     .hero-cycle span:nth-child(2) { animation-delay: 4s; }
@@ -160,9 +161,10 @@
     .hero .blob--2 { width: 280px; height: 260px; background: var(--terra-pale); bottom: 8%; right: 20%; opacity: 0.35; border-radius: 45% 55% 50% 50%/50% 45% 55% 50%; }
     .hero .blob--3 { width: 200px; height: 180px; background: var(--sand); top: 25%; left: -2%; opacity: 0.55; border-radius: 50% 50% 45% 55%/55% 45% 50% 50%; }
     .hero-inner {
-      display: grid; grid-template-columns: 1.1fr 0.9fr;
-      gap: 4rem; align-items: center; position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items: center; position: relative; z-index: 1;
     }
+    .hero-content { position: relative; z-index: 2; }
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: 0.65rem;
       font-family: var(--heading); font-size: 0.65rem; font-weight: 600;
@@ -174,7 +176,7 @@
       font-family: var(--serif);
       font-size: clamp(3.4rem, 6vw, 5.5rem);
       font-weight: 400; line-height: 1.06;
-      color: var(--forest); margin-bottom: 1.5rem;
+      color: var(--forest); margin-bottom: 3rem;
     }
     .hero-title em { font-style: italic; color: var(--terracotta); }
     .hero-sub {
@@ -353,7 +355,7 @@
     .about .blob--b { width: 400px; height: 380px; background: var(--terra-pale); top:0; right:-8%; opacity:0.35; }
     .about-top {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 5rem; align-items: start; margin-bottom: 5rem; position: relative; z-index:1;
+      gap: 5rem; align-items: center; margin-bottom: 5rem; position: relative; z-index:1;
     }
     .about-body { font-family: var(--body); font-weight: 400; font-size: 1rem; color: #3D3D2E; line-height: 1.85; margin-bottom: 1.1rem; }
     .about-pull {
@@ -547,7 +549,7 @@
   <div class="blob blob--3"></div>
   <div class="container">
     <div class="hero-inner">
-      <div>
+      <div class="hero-content">
         <div class="hero-eyebrow">Sustainability &amp; Impact Consulting</div>
         <h1 class="hero-title">Sustainability<br><span class="hero-cycle"><span>without the jargon.</span><span>that drives decisions.</span><span>built on real data.</span></span></h1>
         <p class="hero-sub">
